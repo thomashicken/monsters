@@ -1,0 +1,197 @@
+body {
+    font-family: 'Uncial Antiqua', serif;
+    background-image: url('dungeon.webp');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+    color: rgb(255, 255, 255);
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1000px;
+    margin: auto;
+    padding: 50px 50px 0 50px;
+}
+
+.input-container, .log-container {
+    background: white;
+    color: black;
+    padding: 20px;
+    border-radius: 10px;
+    width: 45%;
+    min-height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    font-family: 'Uncial Antiqua', serif;
+}
+
+input, textarea {
+    width: 90%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid black;
+    border-radius: 5px;
+    font-size: 16px;
+    background: white;
+    color: black;
+    text-align: center;
+    font-family: 'Uncial Antiqua', serif;
+}
+
+textarea {
+    resize: none;
+    height: 100px;
+}
+
+button {
+    background-color: #d9534f;
+    color: white;
+    border: none;
+    margin: 5px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-family: 'Uncial Antiqua', serif;
+}
+
+button:hover {
+    background-color: #c9302c;
+}
+
+#monster-list {
+    margin-top: 10px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.monster-entry {
+    background: white;
+    color: black;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    width: 90%;
+    max-width: 500px;
+    text-align: center;
+    border: 1px solid black;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    font-family: 'Uncial Antiqua', serif;
+}
+
+.auth-buttons {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    z-index: 1000;
+}
+
+.auth-buttons button {
+    background-color: #d9534f;
+    color: white;
+    margin: 5px;
+    padding: 8px 14px;
+    font-size: 14px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    font-family: 'Uncial Antiqua', serif;
+}
+
+.auth-buttons button:hover {
+    background-color: #c9302c;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.6);
+}
+
+.modal-content {
+    background-color: white;
+    color: black;
+    margin: 10% auto;
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    font-family: 'Uncial Antiqua', serif;
+    text-align: center;
+}
+
+.modal-content input {
+    width: 90%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid black;
+    text-align: center;
+}
+
+.modal-content button {
+    background-color: #d9534f;
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.modal-content button:hover {
+    background-color: #c9302c;
+}
+
+.modal-content .close {
+    position: absolute;
+    top: 5px;
+    right: 15px;
+    font-size: 20px;
+    cursor: pointer;
+    color: black;
+}
+
+body.dark-mode .input-container,
+body.dark-mode .log-container,
+body.dark-mode .monster-entry,
+body.dark-mode .modal-content {
+    background-color: black;
+    color: white;
+    border: 1px solid white;
+}
+
+body.dark-mode input,
+body.dark-mode textarea {
+    background-color: black;
+    color: white;
+    border: 1px solid white;
+}
+
+body.dark-mode button {
+    background-color: #444;
+    color: white;
+}
+
+body.dark-mode button:hover {
+    background-color: #666;
+}
